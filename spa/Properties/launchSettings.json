@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "spa": {
+      "commandName": "Project",
+      "commandLineArgs": "update --client-id 8657ba26-dde3-4534-b5a8-8104e73dcbaf --spa-redirect-uri https://localhost:12345 --app-name \"My first spa from provisionning tool\""
+    }
+  }
+}

@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/spa/.vs/spa
+/spa/bin
+/spa/obj
+/tests/bin
+/tests/obj

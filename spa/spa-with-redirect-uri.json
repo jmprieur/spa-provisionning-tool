@@ -1,0 +1,8 @@
+{
+  "displayName": "[DisplayName]",
+  "signInAudience": "AzureADandPersonalMicrosoftAccount",
+  "spa": {
+    "redirectUris": [ "[RedirectUri]" ],
+    "enableAccessTokenIssuance" : false
+  }
+}
