@@ -14,7 +14,7 @@ Provisions or updates a Microsoft identity platform Single Page Application (SPA
  Register a SPA application named "My first app from provisionning tool" with a SPA redirect URI https://localhost:12345
  
  ```Shell
- SPA add --app-Name "My first app from provisionning tool" --spa-redirect-uri https://localhost:12345  [--tenant-id<TenantId>]
+ SPA add --app-name "My first app from provisionning tool" --spa-redirect-uri https://localhost:12345  [--tenant-id<TenantId>]
  ```
  
  Convert an application with a SPA redirect URI to a Web redirect URI
