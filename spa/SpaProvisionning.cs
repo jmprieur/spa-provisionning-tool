@@ -78,7 +78,7 @@ namespace spa
         private async Task UpdateSpaAppWithSpaRedirectUri(Options options)
         {
             // Read the application
-            dynamic app = ReadApplicationRegistration(options);
+            dynamic app = await ReadApplicationRegistration(options);
             if (app != null)
             {
                 // Is it already a Spa?
@@ -101,7 +101,7 @@ namespace spa
                     // Patch content
                     string body = "{ \"spa\" : { \"redirectUris\" : " + webredirectUris + " }, " +
                                     "\"web\" : { \"implicitGrantSettings\" : " + implicitGrantSettings + " } }";
-                    await UpdateApplicationRegistration(app.id, body);
+                    await UpdateApplicationRegistration((string)app.id, body);
                 }
                 WriteUrlOfAppInPortal(options);
             }
@@ -114,7 +114,7 @@ namespace spa
         /// <returns></returns>
         private async Task UpdateSpaAppWithWebRedirectUri(Options options)
         {
-            dynamic app = ReadApplicationRegistration(options);
+            dynamic app = await ReadApplicationRegistration(options);
             if (app != null)
             {
                 // Is it already a Web app?
@@ -138,7 +138,7 @@ namespace spa
                     string body = "{ \"web\" : { \"redirectUris\" : " + spaRedirectUris + ", " +
                                     "            \"implicitGrantSettings\" : " + implicitGrantSettings + " } }";
 
-                    await UpdateApplicationRegistration(app.id, body);
+                    await UpdateApplicationRegistration((string)app.id, body);
                 }
                 WriteUrlOfAppInPortal(options);
             }
@@ -255,7 +255,15 @@ namespace spa
             string secondResponseContent = await httpReponseMessage.Content.ReadAsStringAsync();
             if (httpReponseMessage.StatusCode != System.Net.HttpStatusCode.OK && httpReponseMessage.StatusCode != System.Net.HttpStatusCode.NoContent)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Error.WriteLine(secondResponseContent);
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"Application successfuly updated");
+                Console.ResetColor();
             }
         }
 

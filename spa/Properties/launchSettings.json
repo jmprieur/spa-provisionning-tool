@@ -1,8 +1,14 @@
 {
   "profiles": {
-    "spa": {
+    "updateToWeb": {
       "commandName": "Project",
       "commandLineArgs": "updateToWeb --client-id 8657ba26-dde3-4534-b5a8-8104e73dcbaf"
+    },
+
+    "updateToSpa": {
+      "commandName": "Project",
+      "commandLineArgs": "updateToSpa --client-id 8657ba26-dde3-4534-b5a8-8104e73dcbaf"
     }
+
   }
 }
