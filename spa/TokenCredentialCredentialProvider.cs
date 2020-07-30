@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Azure.Core;
+using Microsoft.Graph;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Azure.Core;
-using Microsoft.Graph;
-using System.Linq;
 
 namespace ProvisionAadApp
 {

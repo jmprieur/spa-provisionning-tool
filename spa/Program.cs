@@ -1,5 +1,4 @@
-﻿using Azure.Identity;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace spa

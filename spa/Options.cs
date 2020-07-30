@@ -34,7 +34,7 @@ namespace spa
                 validated = false;
             }
 
-            if (string.IsNullOrEmpty(ClientId) && ((Action == "updateToSpa") || (Action == "updateToWeb")) )
+            if (string.IsNullOrEmpty(ClientId) && ((Action == "updateToSpa") || (Action == "updateToWeb")))
             {
                 textWriter.WriteLine("updateToSpa or updateToWeb requires you to specify the --client-id");
                 validated = false;
