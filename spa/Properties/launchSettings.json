@@ -1,14 +1,16 @@
 {
   "profiles": {
+    "Create": {
+      "commandName": "Project",
+      "commandLineArgs": "add --app-name \"My first app from provisionning tool\" --spa-redirect-uri https://localhost:12345 --tenant-id msidentitysamplestesting.onmicrosoft.com"
+    },
     "updateToWeb": {
       "commandName": "Project",
       "commandLineArgs": "updateToWeb --client-id 8657ba26-dde3-4534-b5a8-8104e73dcbaf"
     },
-
     "updateToSpa": {
       "commandName": "Project",
       "commandLineArgs": "updateToSpa --client-id 8657ba26-dde3-4534-b5a8-8104e73dcbaf"
     }
-
   }
 }

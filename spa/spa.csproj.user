@@ -4,7 +4,7 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>updateToWeb</ActiveDebugProfile>
+    <ActiveDebugProfile>Create</ActiveDebugProfile>
     <_LastSelectedProfileId>C:\Users\jmprieur\source\repos\github\jmprieur\spa-provisionning-tool\spa\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
 </Project>

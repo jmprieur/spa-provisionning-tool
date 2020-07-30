@@ -66,6 +66,7 @@ namespace spa
             DefaultAzureCredentialOptions defaultAzureCredentialOptions = ConfigurationBinder.Get<DefaultAzureCredentialOptions>(configuration);
             defaultAzureCredentialOptions.ExcludeManagedIdentityCredential = true;
             defaultAzureCredentialOptions.ExcludeInteractiveBrowserCredential = false;
+            defaultAzureCredentialOptions.InteractiveBrowserTenantId = defaultAzureCredentialOptions.SharedTokenCacheTenantId;
 
             Options options = new Options();
             options.Action = args.FirstOrDefault(a => !a.StartsWith("--"));

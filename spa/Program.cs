@@ -5,7 +5,7 @@ namespace spa
 {
     class Program
     {
-        /// SPA add "Name " --tenant-id<TenantId> --spa-redirect-uri https://localhost:12345
+        /// SPA add --app-Name "Name " --tenant-id<TenantId> --spa-redirect-uri https://localhost:12345
         /// > link to app registration
         /// <summary>
         /// SPA update --tenant-id <TenantId> -client-id <ClientID> --spa-redirect-uri https://localhost:12345
