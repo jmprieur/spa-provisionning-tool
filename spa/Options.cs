@@ -22,21 +22,21 @@ namespace spa
         public bool Validate(TextWriter textWriter)
         {
             bool validated = true;
-            if (Action != "add" && Action != "update")
+            if (Action != "add" && Action != "updateToSpa" && Action != "updateToWeb")
             {
-                textWriter.WriteLine("you need to specify an action (add or update)");
+                textWriter.WriteLine("you need to specify an action (add or updateToSpa or updateToWeb)");
                 validated = false;
             }
 
-            if (!(string.IsNullOrEmpty(SpaRedirectUri) ^ string.IsNullOrEmpty(WebRedirectUri)))
+            if (Action == "add" && !(string.IsNullOrEmpty(SpaRedirectUri) ^ string.IsNullOrEmpty(WebRedirectUri)))
             {
                 textWriter.WriteLine("you need to specify --spa-redirect-uri <redirectUri> or --web-redirect-uri <redirectUri>");
                 validated = false;
             }
 
-            if (string.IsNullOrEmpty(ClientId) && Action == "update")
+            if (string.IsNullOrEmpty(ClientId) && ((Action == "updateToSpa") || (Action == "updateToWeb")) )
             {
-                textWriter.WriteLine("update requires you to specify the --client-id");
+                textWriter.WriteLine("updateToSpa or updateToWeb requires you to specify the --client-id");
                 validated = false;
             }
 
